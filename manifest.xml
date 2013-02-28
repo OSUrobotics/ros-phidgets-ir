@@ -1,0 +1,15 @@
+<package>
+  <description brief="phidgets_ir">
+
+     phidgets_ir
+
+  </description>
+  <author>Dan Lazewatsky</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/phidgets_ir</url>
+  <depend package="rospy"/>
+
+</package>
+
+
