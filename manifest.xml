@@ -1,13 +1,13 @@
 <package>
-  <description brief="phidgets_ir">
+  <description brief="ir_comm">
 
-     phidgets_ir
+     ir_comm
 
   </description>
   <author>Dan Lazewatsky</author>
   <license>BSD</license>
   <review status="unreviewed" notes=""/>
-  <url>http://ros.org/wiki/phidgets_ir</url>
+  <url>http://ros.org/wiki/ir_comm</url>
   <depend package="rospy"/>
 
 </package>
