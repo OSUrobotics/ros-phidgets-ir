@@ -1,7 +1,7 @@
 <package>
   <description brief="ir_comm">
 
-     ir_comm
+     ROS Interface to the Phidgets IR devide along with a few sample codes. 
 
   </description>
   <author>Dan Lazewatsky</author>
