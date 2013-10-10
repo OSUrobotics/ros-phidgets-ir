@@ -1,4 +1,4 @@
 ros-phidgets-ir
 ===============
 
-Sent/receive ir data with a phidgets ir board
+Send/receive ir data with a phidgets ir board
