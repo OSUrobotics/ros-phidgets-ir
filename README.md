@@ -16,3 +16,12 @@ Send/receive ir data with a phidgets ir board
      * Run `sudo python setup.py install`
  * ROS Package
    * Clone this repository into as `ir_comm` and add it to your `ROS_PACKAGE_PATH`
+
+# Usage
+## Learning Codes
+    python nodes/learn.py [output file].pkl
+    
+Point the original remote at the the phidgets device and press the desired button until you see the message `Wrote code to [output file].pkl`. If it isn't working, move the remote closer or farther from the phidgets device.
+
+## Testing Codes
+    python nodes/transmit_one.py [code file]
