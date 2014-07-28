@@ -1,7 +1,7 @@
 from Phidgets.Manager import Manager
 from Phidgets.Devices.IR import IR, IRCode, IRCodeInfo
 from Phidgets.Events.Events import AttachEventArgs, DetachEventArgs, ErrorEventArgs, IRCodeEventArgs, IRLearnEventArgs, IRRawDataEventArgs
-import rospy, time
+import time
 
 class ROSIr(object): 
 	code_read = False
@@ -24,11 +24,14 @@ class ROSIr(object):
 
 	def learn(self):
 		self.ir.setOnIRCodeHandler(self.recv_learn_handler)
-		r = rospy.Rate(10)
-		while not rospy.is_shutdown() and not self.code_read:
+		while not self.code_read:
 			try:
 				learned_code = self.ir.getLastLearnedCode()
 				self.code_read = True
 				return learned_code.Code, learned_code.CodeInfo
+			except KeyboardInterrupt:
+				return None, None
+				break
 			except:
 				pass
+			time.sleep(0.1)

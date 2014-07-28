@@ -35,7 +35,7 @@ if __name__ == '__main__':
 	if len(sys.argv) != 2:
 		print 'Usage: learn.py [filename]'
 		sys.exit(1)
-	rospy.init_node('ir_learn')
+	#rospy.init_node('ir_learn')
 	ir = ROSIr()
 	print 'Waiting for code...'
 	code, info = ir.learn()
