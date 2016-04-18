@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+  <name>ir_comm</name>
+  <version>0.0.0</version>
+  <description>
+
+     ROS Interface to the Phidgets IR devide along with a few sample codes. 
+
+  </description>
+  <author>Dan Lazewatsky</author>
+  <maintainer email="reiner@hs-weingarten.de">Benjamin Reiner</maintainer>
+  <license>BSD</license>
+  <url>http://ros.org/wiki/ir_comm</url>
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>rospy</build_depend>
+  <run_depend>rospy</run_depend>
+
+</package>
+
+
