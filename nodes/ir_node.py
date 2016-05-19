@@ -50,6 +50,11 @@ class IRTransmitter(object):
 		if msg.data in self.codes:
 			self.ir.ir.transmit(*self.codes[msg.data])
 			rospy.loginfo('Transmitted %s' % msg.data)
+		else:
+			rospy.logerr("Requested code '%s' not known!" % msg.data)
+			print 'available codes:'
+			for key in self.codes.keys() :
+				print '  ', key
 
 if __name__ == '__main__':
 	rospy.init_node('ir_node')
