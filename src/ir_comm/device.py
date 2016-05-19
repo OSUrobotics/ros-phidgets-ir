@@ -13,9 +13,13 @@ class ROSIr(object):
 		m.openManager()
 		time.sleep(1)
 		# print 'There are', len(m.getAttachedDevices()), 'device(s) attached'
-		d = m.getAttachedDevices()[0]
-		self.ir = IR()
-		self.ir.openPhidget(d.getSerialNum())
+		try:
+			d = m.getAttachedDevices()[0]
+			self.ir = IR()
+			self.ir.openPhidget(d.getSerialNum())
+		except IndexError as e:
+			print 'No devices attached!'
+			raise e
 		# ir.setOnIRCodeHandler(recv)
 		# return ir
 
