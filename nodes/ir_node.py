@@ -26,7 +26,6 @@
 
 # Author Dan Lazewatsky/lazewatd@engr.orst.edu
 
-import roslib; roslib.load_manifest('ir_comm')
 import sys, rospy
 from ir_comm.device import ROSIr
 from ir_comm.utils import loadIRCode
@@ -51,6 +50,11 @@ class IRTransmitter(object):
 		if msg.data in self.codes:
 			self.ir.ir.transmit(*self.codes[msg.data])
 			rospy.loginfo('Transmitted %s' % msg.data)
+		else:
+			rospy.logerr("Requested code '%s' not known!" % msg.data)
+			print 'available codes:'
+			for key in self.codes.keys() :
+				print '  ', key
 
 if __name__ == '__main__':
 	rospy.init_node('ir_node')

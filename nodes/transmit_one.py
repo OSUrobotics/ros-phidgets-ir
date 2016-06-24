@@ -26,7 +26,6 @@
 
 # Author Dan Lazewatsky/lazewatd@engr.orst.edu
 
-import roslib; roslib.load_manifest('ir_comm')
 import sys, time
 from ir_comm.device import ROSIr
 from ir_comm.utils import loadIRCode
